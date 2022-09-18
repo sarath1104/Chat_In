@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chartin!</title>
+    <link rel="stylesheet" href="css/chatin_login.css">
+</head>
+<body>
+    <div class="box">
+        <div class="form-box">
+            <h1>Chat !n</h1>
+            <div class="btn-box">
+                <div id="btn"></div>
+                <button type="button" class="toggle-btn" onclick="login()">Login</button>
+                <button type="button" class="toggle-btn" onclick="signup()">Signup</button>
+            </div>
+            <form id="login" class="login-input"  action="/main" method="post">
+                <input type="text" class="input-box" placeholder=" Email,Username,Phone number" name="lomail">
+                <input type="password" class="input-box" placeholder="Password" name="lopassword">
+                <button type="submit" class="login-btn">Login</button>
+                <a href="/forgot" class="forgot-password">Forgot Password?</a>
+            </form> 
+        
+            <form id="signup" class="login-input" action="/"  method="post">
+                <input type="text" class="input-box" placeholder=" Email or Phone number" name="email">
+                <input type="text" class="input-box" placeholder="Username" name="username">
+                <input type="password" class="input-box" placeholder="Password" name="password">
+                <input type="password" class="input-box" placeholder=" Confirm Password" name="confrm">
+                <input type="file" class="input-box" placeholder="upload file" name="photo">
+                <button type="submit" class="login-btn">Signup</button>
+            </form> 
+        </div>
+    </div>
+    <script src="css/chatin_main.js">
+    </script>
+</body>
+</html>

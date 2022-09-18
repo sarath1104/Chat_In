@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat In!</title>
+    <link rel="stylesheet" href="css/chatin_main.css">
+    <script>
+           const searchvalue=document.getElementsByClassName(".search-box").value;
+         const search=()=>{
+         
+            const  total=document.getElementsByTagName("h3");
+            const lists=document.querySelectorAll(".content");
+            for(var i=0;i<total.length;i++){
+                let same=lists[i].getElementsByTagName('h3')[0];
+                if(same){
+                    let textvalue=same.innerHTML
+                    if(textvalue.indexOf(searchvalue)>-1){
+                        lists[i].style.display="";
+                    }
+                    else{
+                        lists[i].style.display="none";
+                    }
+                }
+            }
+
+        }
+
+    </script>
+    <link rel="icon" href="cin-logo2.jpg">
+</head>
+<body>
+    <nav>
+        <div class="nav-left">
+            <h1> Chat !n</h1>
+        </div>
+        <div class="nav-right">
+            <form class="search-box">
+                <img src="images/search_image.png" height=18px >
+                <input type="text" placeholder="Search" id="searchId" onkeyup="search()">
+            </form>
+            <div class="prof_pic" onclick="settingsMenuToggle()">
+                <img src="images/IMG_20210410_173524_404.jpg">
+            </div>
+        </div>
+    </nav>
+    <div class="container">
+        <div class="left-sider">
+            <div class="wrapper">
+                <section class="ca">
+                 <div class="list">
+                  
+                <% for (let i=0;i<totalmembers.length;i++){%>  
+                <div class="content">
+                    <% console.log(totalmembers[i].img); %>
+                    <img src="images/<%= totalmembers[i].img %>" alt="">
+                <div class="details">
+                        <h3><%= totalmembers[i].userName%></h3>
+                </div>
+                </div>
+                <div class="status"><i class="fas fa-circle"></i></div>
+
+
+                <% } %>
+                 </div>
+                </section>
+                </div>
+  </div>
+        <div class="middle"></div>
+        <div class="right-sider">
+            <div class="wrapper">
+                <section class="chat-area">
+                    <header>
+                        <a href="#" class="back-icon"><i class="fas fa-arrow-left"></i></a>
+                        <img src="images/IMG_20210410_173524_404.jpg" alt="">
+                        <div class="details">
+                            <span>THUNDER BUDDIES</span>
+                            <p> Active now</p>
+
+                        </div>
+                    </header>
+                    <div class="chat-box">
+                        <div class="chat outgoing">
+                            <div class="details">
+                                <p>lets walk </p>
+        
+                            </div>
+                        </div>
+                            <div class="chat incoming">
+                                <img src="images/IMG_20210410_173524_404.jpg" alt="">
+                                <div class="details">
+                                    <p>Let's chat</p>
+                                </div>
+                            </div>
+                          
+                            <div class="chat outgoing">
+                                <div class="details">
+                                    <p>Let's chat</p>
+                                </div>
+                            </div>
+                                <div class="chat incoming">
+                                    <img src="images/IMG_20210410_173524_404.jpg" alt="">
+                                    <div class="details">
+                                        <p>Let's chat</p>
+                                    </div>
+                                </div>
+                    </div>
+                    <form action="#" class="typing-area">
+                        <input type="text" placeholder="Type a message here...">
+                        <button><i class="images\send.png"></i></button>
+                    </form>
+                </section>
+            </div>
+       </div>
+<!-----------------------------------------settings-menu----------------------------------------->
+        <div class="settings-menu" >
+            <div class="name">
+                <img src="images/prof.png" class="prof-icon">
+                <p class="name1">Sarath Chandra </p>
+            </div>
+            <hr>
+            <div class="settings-links">
+                <img src="images/settings-gears.png" height="20px">
+                <a href="#" style="padding-left: 5px;">Settings <img src="images/next.png" width="10px"></a>
+            </div>
+            <div class="settings-links">    
+                <img src="images/padlock.png" height="20px">
+                <a href="#" style="padding-left: 5px;">Privacy <img src="images/next.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+                <img src="images/question.png" height="20px">
+                <a href="#" style="padding-left: 5px;">Help <img src="images/next.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+                <img src="images/info-button.png" height="20px">
+                <a href="#" style="padding-left: 5px;">About <img src="images/next.png" width="10px"></a>
+            </div>
+            <div class="settings-links">
+                <img src="images/logout.png" height="20px">
+                <a href="#" style="padding-left: 5px;">Logout <img src="images/next.png" width="10px"></a>
+            </div>
+        </div >
+    <script src="css/chatin_main.js"></script>
+</body>
+</html>
